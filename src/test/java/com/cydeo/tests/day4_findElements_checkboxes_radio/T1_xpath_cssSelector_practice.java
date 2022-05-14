@@ -1,4 +1,4 @@
-package com.cydeo.tests.findElements_checkboxes_radio;
+package com.cydeo.tests.day4_findElements_checkboxes_radio;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
