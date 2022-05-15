@@ -30,7 +30,7 @@ public class T5_Dropdown {
 
     @AfterMethod
     public void tearDownMethod(){
-//        driver.close();
+        driver.close();
     }
 
     @Test
