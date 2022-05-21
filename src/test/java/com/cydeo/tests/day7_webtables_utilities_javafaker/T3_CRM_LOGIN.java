@@ -1,11 +1,11 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
 import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.CRM_Utilities;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -49,10 +49,44 @@ public class T3_CRM_LOGIN {
 
     }
 
-    @AfterMethod
-    public void teardownMethod(){
-        driver.close();
+    @Test
+    public void crm_login_test_2(){
+
+        //1. Create new test and make set ups
+        //2. Go to : https://login1.nextbasecrm.com/
+        driver.get("https://login1.nextbasecrm.com/");
+
+        //Calling my utility method to login helpdesk1
+        CRM_Utilities.crm_login(driver);
+
+        //6. Verify title is as expected:
+        //Expected: Portal
+        BrowserUtils.verifyTitle(driver, "Portal");
+
     }
+
+    @Test
+    public void crm_login_test_3(){
+
+        //1. Create new test and make set ups
+        //2. Go to : https://login1.nextbasecrm.com/
+        driver.get("https://login1.nextbasecrm.com/");
+
+        //Calling my utility method to login helpdesk1
+        CRM_Utilities.crm_login(driver, "helpdesk2@cybertekschool.com", "UserUser");
+
+        //6. Verify title is as expected:
+        //Expected: Portal
+        BrowserUtils.verifyTitle(driver, "Portal");
+
+    }
+
+//    @AfterMethod
+//    public void teardownMethod(){
+//        driver.close();
+//    }
+
+
 }
 //USERNAME                      PASSWORD
 //helpdesk1@cybertekschool.com  UserUser
