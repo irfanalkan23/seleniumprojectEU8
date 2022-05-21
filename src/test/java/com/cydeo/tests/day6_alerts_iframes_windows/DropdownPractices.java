@@ -1,6 +1,6 @@
 package com.cydeo.tests.day6_alerts_iframes_windows;
 
-import com.cydeo.utilities.HandleWait;
+import com.cydeo.utilities.ReviewUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,15 +35,15 @@ public class DropdownPractices {
 
         //Use all Select options. (visible text, value, index)
         //3. Select Illinois
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
         stateDropdown.selectByVisibleText("Illinois");
 
         //4. Select Virginia
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
         stateDropdown.selectByValue("VA");
 
         //5. Select California
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
         stateDropdown.selectByIndex(5);
 
         //6. Verify final selected option is California.
@@ -64,15 +64,15 @@ public class DropdownPractices {
         Select dayDropdown = new Select(driver.findElement(By.xpath("//select[@id='day']")));
 
         //Select year using : visible text
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
         yearDropdown.selectByVisibleText("1923");
 
         //Select month using : value attribute
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
         monthDropdown.selectByVisibleText("December");
 
         //Select day using : index number
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
         dayDropdown.selectByVisibleText("1");
 
         //create assertions

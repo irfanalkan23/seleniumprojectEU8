@@ -1,6 +1,6 @@
 package com.cydeo.reviewWithOscar.week03;
 
-import com.cydeo.utilities.HandleWait;
+import com.cydeo.utilities.ReviewUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -77,13 +77,13 @@ locate all checkBoxes: I need to find a locator which will show(point) all the c
         String locatorOfCheckBoxWithName = "//td[.='"+name+"']/../td[1]/input";
         WebElement checkBox = driver.findElement(By.xpath(locatorOfCheckBoxWithName));
         checkBox.click();  // select the checkbox with click()
-        HandleWait.staticWait(2);
+        ReviewUtils.staticWait(2);
 
         // locate delete button and click
         driver.findElement(By.id("ctl00_MainContent_btnDelete")).click();
 
         // put some waiting time
-        HandleWait.staticWait(2);
+        ReviewUtils.staticWait(2);
 
 // After we delete, we can get all the names of the customers as a List, then verify that deleted name is NOT in the list
         // need to get all the names from the table

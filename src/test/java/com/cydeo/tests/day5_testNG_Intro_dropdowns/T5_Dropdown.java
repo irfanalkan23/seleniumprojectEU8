@@ -1,6 +1,6 @@
 package com.cydeo.tests.day5_testNG_Intro_dropdowns;
 
-import com.cydeo.utilities.HandleWait;
+import com.cydeo.utilities.ReviewUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -39,15 +39,15 @@ public class T5_Dropdown {
         Select selectState = new Select(driver.findElement(By.xpath("//select[@id='state']")));
         //3. Select Illinois
         selectState.selectByIndex(13);
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //4. Select Virginia
         selectState.selectByValue("VA");
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //5. Select California
         selectState.selectByVisibleText("California");
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //6. Verify final selected option is California.
         String expected = "California";

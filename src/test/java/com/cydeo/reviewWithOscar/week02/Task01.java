@@ -1,6 +1,6 @@
 package com.cydeo.reviewWithOscar.week02;
 
-import com.cydeo.utilities.HandleWait;
+import com.cydeo.utilities.ReviewUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,13 +17,13 @@ public class Task01 {
         //        go to https://practice.cydeo.com/
         driver.get("https://practice.cydeo.com/");
 
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //        then click on "forgot_password" link
         WebElement forgotPasswordLink = driver.findElement(By.linkText("Forgot Password"));
         forgotPasswordLink.click();
 
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //        enter any email
         WebElement emailBox = driver.findElement(By.name("email"));
@@ -56,7 +56,7 @@ public class Task01 {
         //use Retrieve word to locate with XPATH
         driver.findElement(By.xpath("//i[contains(text(),'Retrieve')]")).click();
 
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //        verify that confirmation message says 'Your e-mail's been sent!'
         String expectedMessage = "Your e-mail's been sent!";

@@ -1,6 +1,6 @@
 package com.cydeo.tests.day5_testNG_Intro_dropdowns;
 
-import com.cydeo.utilities.HandleWait;
+import com.cydeo.utilities.ReviewUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,9 +40,9 @@ public class T8_MultipleSelectDropdown {
         List<WebElement> languages = driver.findElements(By.xpath("//select[@name='Languages']//option"));
         for (WebElement eachLanguage : languages) {
             select.selectByVisibleText(eachLanguage.getText());
-            HandleWait.staticWait(1);
+            ReviewUtils.staticWait(1);
         }
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //4. Print out all selected values.
         for (WebElement eachLanguage : languages) {
@@ -50,13 +50,13 @@ public class T8_MultipleSelectDropdown {
                 System.out.println(eachLanguage.getText());
             }
         }
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
 
         //5. Deselect all values.
         for (WebElement eachLanguage : languages) {
             select.deselectAll();
         }
-        HandleWait.staticWait(1);
+        ReviewUtils.staticWait(1);
     }
 
 }
