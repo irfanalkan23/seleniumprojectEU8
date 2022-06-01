@@ -28,13 +28,14 @@ public class T7_NonSelectDropdown {
 
     @AfterMethod
     public void tearDownMethod(){
-        driver.close();
+//        driver.close();
     }
 
     @Test
     public void test(){
         //3. Click to non-select dropdown
         WebElement nonSelectDropdown = driver.findElement(By.xpath("//a[@id='dropdownMenuLink']"));
+//        WebElement nonSelectDropdown = driver.findElement(By.className("btn btn-secondary dropdown-toggle"));
         nonSelectDropdown.click();
 
         //4. Select Facebook from dropdown

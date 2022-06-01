@@ -47,6 +47,7 @@ public class T1_Alert_Practices {
         String actualText = resultText.getText();
         Assert.assertEquals(actualText, expectedText, "Actual result test is not as expected!!!");
 
+
     }
 
 }
