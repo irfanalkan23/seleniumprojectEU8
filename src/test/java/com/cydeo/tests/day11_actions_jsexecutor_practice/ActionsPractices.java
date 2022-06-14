@@ -32,7 +32,7 @@ public class ActionsPractices {
         //TC #5: Scroll practice 2
         //1- Continue from where the Task 4 is left in the same test.
         //2- Scroll back up to “Home” link using PageUP button
-        actions.sendKeys(Keys.UP, Keys.UP).perform();
+        actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP).perform();
 
 //        WebElement homeLink = Driver.getDriver().findElement(By.xpath("//a[text()='Home']"));
 //        actions.moveToElement(homeLink).perform();
